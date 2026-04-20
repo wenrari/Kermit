@@ -278,6 +278,25 @@ section{position:relative}
     letter-spacing:.5px;
     font-weight:400;
 }
+.about-lede .hl{
+    position:relative;
+    display:inline;
+    color:var(--swamp);
+    background:
+        linear-gradient(120deg, var(--accent-hot) 0%, var(--accent-hot) 100%)
+        no-repeat;
+    background-size:100% 70%;
+    background-position:0 88%;
+    padding:0 .2em;
+    box-decoration-break:clone;
+    -webkit-box-decoration-break:clone;
+    animation:hlSweep 2.8s cubic-bezier(.7,0,.3,1) .4s both;
+}
+@keyframes hlSweep{
+    0%{background-size:0 70%}
+    60%{background-size:100% 70%}
+    100%{background-size:100% 70%}
+}
 
 .about-split{
     display:flex;gap:2vw;margin-top:3vw;
