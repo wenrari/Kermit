@@ -268,44 +268,15 @@ section{position:relative}
 /* ============================================
    ABOUT
    ============================================ */
-.about{padding:6vw 6vw 3vw;display:flex;flex-direction:column;gap:1.2vw}
-.about-top-row{display:flex;flex-direction:column;gap:0}
-.about-top-left{flex:1}
-.kym-link{
-    display:inline-flex;align-items:center;gap:6px;
-    color:var(--kermit-dk);font-family:var(--display);
-    font-size:clamp(13px,1.2vw,18px);
-    text-transform:uppercase;letter-spacing:2px;
-    margin-top:14px;
-    transition:color .3s, gap .3s, letter-spacing .3s;
-}
-.kym-link svg{transition:transform .3s}
-.kym-link:hover{color:var(--accent);gap:10px;letter-spacing:3px}
-.kym-link:hover svg{transform:translate(3px,-3px)}
-
-.bubble{
-    background:var(--swamp);color:var(--cream);
-    font-size:clamp(15px,1.35vw,20px);
-    padding:2.2vw 2vw;line-height:1.7;
-    border-radius:22px 22px 22px 4px;
-    max-width:72%;
-    position:relative;
-    border:3px solid var(--swamp);
-    box-shadow:6px 6px 0 var(--accent);
-}
-.bubble::before{
-    content:'';position:absolute;left:30px;bottom:-18px;
-    border:10px solid transparent;
-    border-top:18px solid var(--swamp);
-    border-left:0;
-    filter:drop-shadow(2px 2px 0 var(--accent));
-}
-.about-label{
+.about{padding:7vw 6vw 3vw;display:flex;flex-direction:column;gap:2vw}
+.about-top{max-width:1100px}
+.about-lede{
     font-family:var(--display);
-    text-transform:uppercase;color:var(--kermit-lt);background:var(--swamp);
-    font-size:clamp(28px,3.8vw,58px);padding:6px 1.5vw 14px;
-    border-radius:0 0 16px 16px;width:fit-content;
-    margin-top:-4px;letter-spacing:4px;
+    font-size:clamp(28px,3.6vw,58px);
+    color:var(--swamp);
+    line-height:1.2;
+    letter-spacing:.5px;
+    font-weight:400;
 }
 
 .about-split{
@@ -355,17 +326,6 @@ section{position:relative}
     box-shadow:8px 8px 0 var(--accent);
 }
 @keyframes wobble{0%,100%{transform:rotate(-1deg) translateY(0)}50%{transform:rotate(1deg) translateY(-6px)}}
-
-.corner-stamp{
-    position:absolute;top:20px;right:-30px;
-    font-family:var(--display);
-    font-size:11px;letter-spacing:3px;text-align:center;
-    background:var(--accent);color:var(--cream);
-    padding:8px 40px;transform:rotate(30deg);
-    border-top:2px solid var(--swamp);
-    border-bottom:2px solid var(--swamp);
-    text-transform:uppercase;line-height:1.2;
-}
 
 .panel-tag{
     font-family:var(--display);
@@ -417,18 +377,17 @@ section{position:relative}
    ============================================ */
 .cards{
     display:flex;gap:2vw;padding:2vw 6vw 5vw;
+    justify-content:center;
 }
 .card{
-    flex:1;border:4px solid var(--swamp);background:var(--card);
+    flex:1;max-width:720px;border:4px solid var(--swamp);background:var(--card);
     border-radius:20px;display:flex;flex-direction:column;
     box-shadow:var(--shadow-hard);
     transition:transform .3s;
     overflow:hidden;
 }
-.card-l{transform:rotate(-1.2deg)}
-.card-r{transform:rotate(.8deg)}
-.card-l:hover{transform:rotate(-1.2deg) translateY(-6px)}
-.card-r:hover{transform:rotate(.8deg) translateY(-6px)}
+.card-l{transform:rotate(-1deg)}
+.card-l:hover{transform:rotate(-1deg) translateY(-6px)}
 
 .card-head{
     font-family:var(--display);
