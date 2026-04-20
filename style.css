@@ -56,13 +56,6 @@ section{position:relative}
     text-transform:uppercase;
 }
 
-/* ---- NOISE ---- */
-.noise{
-    position:fixed;top:0;left:0;width:100%;height:100%;
-    pointer-events:none;z-index:99999;
-    opacity:.08;mix-blend-mode:multiply;
-}
-
 /* ============================================
    NAV
    ============================================ */
@@ -167,7 +160,8 @@ section{position:relative}
     transition:transform .25s cubic-bezier(.34,1.56,.64,1), background .2s, color .2s;
     box-shadow:var(--shadow-hard-sm);
 }
-.social-icon svg{width:46%;height:46%}
+.social-icon svg,
+.social-icon img{width:52%;height:52%;object-fit:contain}
 .social-icon:hover{
     transform:translate(-2px,-2px) rotate(-6deg);
     background:var(--swamp);color:var(--kermit-lt);
@@ -195,19 +189,25 @@ section{position:relative}
 
 .hero-subtitle{
     font-family:var(--novelty);
-    font-size:clamp(16px,2.2vw,28px);
+    font-size:clamp(15px,1.7vw,22px);
     color:var(--swamp);
     background:var(--cream);
     display:inline-block;
-    padding:10px 28px;
+    padding:12px 28px;
     border:3px solid var(--swamp);
-    border-radius:999px;
+    border-radius:22px;
     box-shadow:var(--shadow-hard-sm);
     margin-top:28px;
-    letter-spacing:1px;
+    letter-spacing:.5px;
     transform:rotate(-1.5deg);
+    max-width:min(720px,92vw);
+    line-height:1.35;
 }
-.ribbit{color:var(--accent)}
+.hero-subtitle .tea{
+    display:inline-block;font-size:1.2em;
+    animation:teaSwirl 3s ease-in-out infinite;
+}
+@keyframes teaSwirl{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
 
 .hero-char{
     width:clamp(260px,38vw,520px);
@@ -407,7 +407,9 @@ section{position:relative}
     box-shadow:4px 4px 0 var(--cream);
     transition:transform .2s, box-shadow .2s;
 }
-.panel-links a svg{width:48%;height:48%}
+.panel-links a svg,
+.panel-links a img{width:52%;height:52%;object-fit:contain}
+.panel-links a img.dex-icon{filter:invert(1) brightness(1.2)}
 .panel-links a:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--cream)}
 
 /* ============================================
@@ -538,7 +540,8 @@ section{position:relative}
     border-radius:10px;border:2px solid var(--cream);
     transition:transform .2s, background .2s, color .2s;
 }
-.card-socials a svg{width:50%;height:50%}
+.card-socials a svg,
+.card-socials a img{width:54%;height:54%;object-fit:contain}
 .card-socials a:hover{transform:scale(1.1) rotate(-6deg);background:var(--accent);color:var(--cream)}
 
 /* ============================================
@@ -621,9 +624,14 @@ section{position:relative}
     width:92%;height:92%;
     clip-path:polygon(0 0,100% 0,82% 100%,0 100%);
     overflow:hidden;background:var(--pond);
-    display:flex;align-items:center;justify-content:center;
+    display:flex;align-items:flex-start;justify-content:center;
+    padding-top:12px;
 }
-.token-clip-left-inner img{width:80%;filter:drop-shadow(3px 4px 0 var(--swamp))}
+.token-clip-left-inner img{
+    width:72%;
+    filter:drop-shadow(3px 4px 0 var(--swamp));
+    object-fit:contain;
+}
 
 .token-center{
     flex:1;display:flex;flex-direction:column;
@@ -780,7 +788,9 @@ footer::before{
     border-radius:50%;border:2px solid var(--kermit-lt);
     transition:transform .2s, background .2s;
 }
-.footer-links a svg{width:48%;height:48%}
+.footer-links a svg,
+.footer-links a img{width:52%;height:52%;object-fit:contain}
+.footer-links a img.dex-icon{filter:invert(1) brightness(1.2)}
 .footer-links a:hover{transform:translateY(-3px) rotate(-6deg);background:var(--accent)}
 
 .footer-bottom{
