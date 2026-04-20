@@ -2,6 +2,7 @@
 // $KERMIT — update the CA here once launched
 // ==============================
 const CONTRACT_ADDRESS = '0xfe625Bb2D2a0f24aCE72aDc3365f203771495e39';
+const DEX_PAIR_ADDRESS = '0x3fa0d2fb8ec605447da6b7b54cda8d8e3dfff22f';
 
 document.addEventListener('DOMContentLoaded', () => {
     const tokenEl = document.getElementById('token');
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dexIframe = document.getElementById('iframe-chart');
     if (dexIframe) {
-        dexIframe.src = `https://dexscreener.com/ethereum/${CONTRACT_ADDRESS}?embed=1&theme=dark&trades=0&info=0`;
+        dexIframe.src = `https://dexscreener.com/ethereum/${DEX_PAIR_ADDRESS}?embed=1&theme=dark&trades=0&info=0`;
     }
 });
 
